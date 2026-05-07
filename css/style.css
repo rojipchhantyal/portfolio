@@ -20,12 +20,15 @@
 
 /* style for header section */
 header{
-    height: 98px;
+    height: 101px;
     background: var(--primary-color);
     border-bottom: 1px solid var(--secondary-text-color);
     box-sizing: border-box;
-    padding: 18px;
-    border-bottom: 1px solid var(--secondary-text-color);
+    padding: 18px 18px 0 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border-bottom: 2px solid var(--secondary-text-color);
 }
 .page-title{
     background-color: red;
@@ -124,4 +127,47 @@ header{
 }
 #mode-theme:hover{
     background-color: var(--hover-effect-on-menus);
+}
+nav{
+    color: white;
+    background-color: blue;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    padding-left: 8px;
+    gap: 12px;
+}
+.options{
+    padding: 5px 6px;
+    background-color: green;
+    border-radius: 6px;
+    transition: all ease-in-out 0.2s;
+    position: relative;
+    cursor: pointer;      
+}
+.options i{
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--extra-text-color);
+}
+.options span{
+    font-size: 14px;  
+    font-weight: 500;
+}
+.options:hover{
+    background-color: var(--hover-effect-on-menus);
+}
+.options::after{
+    content: "";
+    height: 2px;
+    width: 104%;
+    background-color: var(--orangey-color);
+    position: absolute;
+    bottom: -8px;
+    left: -2px;
+    border-radius: 4px;
+    opacity: 0;
+}
+.options.active::after{
+    opacity: 1;
 }
