@@ -31,7 +31,7 @@ header{
     border-bottom: 2px solid var(--secondary-text-color);
 }
 .page-title{
-    background-color: red;
+    /* background-color: red; */
     color: var(--primary-text-color);
     display: flex;
     align-items: center;
@@ -130,7 +130,7 @@ header{
 }
 nav{
     color: white;
-    background-color: blue;
+    /* background-color: blue; */
     height: 34px;
     display: flex;
     align-items: center;
@@ -139,7 +139,7 @@ nav{
 }
 .options{
     padding: 5px 6px;
-    background-color: green;
+    /* background-color: green; */
     border-radius: 6px;
     transition: all ease-in-out 0.2s;
     position: relative;
@@ -170,4 +170,89 @@ nav{
 }
 .options.active::after{
     opacity: 1;
+}
+
+/* main content style */
+main{
+    min-height: 100vh;
+    width: 100%;
+    background-color: var(--secondary-color);
+    box-sizing: border-box;
+    padding: 32px 32px 0 32px;
+    display: flex;
+    justify-content: center;
+}
+.profile-infos{
+    width: 292px;
+    min-height: 100vh;
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+}
+.main-contents{
+    width: 896px;
+    height: 100vh;
+    background-color: red;
+    margin-left: 18px;
+}
+.profile-image{
+    width: 292px;
+    height: 292px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.profile-image img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+.infos{
+    background-color: rgb(219, 26, 58);
+}
+.infos section{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding: 16px 0 16px 0;
+    border-bottom: 2px solid var(--secondary-text-color);
+}
+.profile-name h3{
+    font-size: 24px;
+    color: var(--primary-text-color);
+}
+.profile-name span{
+    font-size: 20px;
+    color: var(--secondary-text-color);
+    font-weight: 400;
+}
+.infos section p{
+    font-size: 16px;
+    color: var(--primary-text-color);
+}
+.infos > *{
+    background-color: rgb(18, 183, 59);
+}
+.infos ul{
+    display: flex;
+    flex-direction: column;
+    padding: 16px 0;
+    gap: 8px;
+}
+.infos ul li{
+    list-style: none;
+    color: var(--primary-text-color);
+}
+.infos ul li a{
+    font-size: 14px;
+    text-decoration: none;
+    color: var(--primary-text-color);
+    transition: all ease-in-out 0.2s;
+}
+.infos ul li a:hover{
+    text-decoration: underline;
+    color: rgb(21, 78, 250);
+}
+.infos ul li i{
+    font-size: 14px;
+    color: var(--primary-text-color);
 }
