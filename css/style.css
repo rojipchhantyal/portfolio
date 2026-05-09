@@ -161,6 +161,7 @@ nav{
     content: "";
     height: 2px;
     width: 104%;
+    border-radius: 8px;
     background-color: var(--orangey-color);
     position: absolute;
     bottom: -8px;
@@ -173,6 +174,9 @@ nav{
 }
 
 /* main content style */
+.main-contents-wrapper{
+    background-color: green;
+}
 main{
     min-height: 100vh;
     width: 100%;
@@ -188,12 +192,6 @@ main{
     background-color: blue;
     display: flex;
     flex-direction: column;
-}
-.main-contents{
-    width: 896px;
-    height: 100vh;
-    background-color: red;
-    margin-left: 18px;
 }
 .profile-image{
     width: 292px;
@@ -255,4 +253,104 @@ main{
 .infos ul li i{
     font-size: 14px;
     color: var(--primary-text-color);
+}
+
+/* style for main contain */
+.main-contents{
+    width: 896px;
+    height: fit-content;
+    background-color: red;
+    margin-left: 18px;
+    border: 1px solid var(--extra-text-color);
+    border-radius: 8px;
+    box-sizing: border-box;
+    padding: 24px; 
+}
+.title{
+    border-bottom: 1px solid var(--secondary-text-color);
+}
+.title h1{
+    font-size: 34px;
+    font-weight: 600;
+    color: var(--primary-text-color);
+    margin-top: 12px;
+    text-align: center;
+    margin-bottom: 4px;
+}
+.title p{
+    font-size: 12px;
+    color: var(--primary-text-color);
+    font-weight: 400;
+}
+.title p span{
+    font-size: 12px;
+    color: var(--extra-text-color);
+    font-weight: 400;
+}
+.about-me p{
+    color: var(--primary-text-color);
+    font-size: 17.5px;
+    font-weight: 500;
+    margin-top: 20px;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+.about-me a{
+    background-color: rgb(3, 139, 3);
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--primary-text-color);
+    padding: 6px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+.about-me h4{
+    color: var(--primary-text-color);
+    font-size: 21.5px;
+    font-weight: 600;
+    margin-top: 24px;
+    margin-bottom: 4px;
+}
+.technologies{
+    border-top: 1px solid var(--extra-text-color);
+    padding-top:16px;
+}
+.profile-views{
+    width: fit-content;
+    border-radius: 4px;
+    margin-top: 16px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+.profile-views span{
+    font-size: 12px;
+    color: #FFF;
+    font-weight: 500;
+    text-shadow: 1px 1px var(--hover-effect-on-menus);
+}
+#count-text{
+    background-color: var(--secondary-text-color);
+    padding: 4px 4px 4px 8px;
+}
+#counts{
+    background-color: rgb(27, 133, 255);
+    padding: 4px 8px 4px 4px;
+}
+.technologies p{
+    font-size: 14px;
+    color: var(--primary-text-color);
+    margin-top: 18px;
+    font-weight: 500;
+}
+.technologies p a{
+    font-size: 14px;
+    font-weight: 500;
+    color: rgb(47, 99, 255);
+}
+.pinned-main-content{
+    height: 100vh;
+    width: 896px;
+    background-color: gold;
+    margin-left: 18px;
 }
