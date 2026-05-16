@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./images/final_logo-removebg-preview0.png">
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/responsive.css">
     <title>Rojip Chhantyal</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,12 +19,11 @@
     <header>
         <div class="page-title">
             <div class="logo">
-                <i class="ri-menu-fill"></i>
                 <span>R</span>
                 <p>Rojip Chhantyal</p>
             </div>
             <ul>
-                <li id="search-bar">
+                <li id="search-bar"  onclick="searchOpen()">
                     <i class="ri-search-line"></i>
                     <span>
                         Type 
@@ -31,24 +31,91 @@
                         to search
                     </span>
                 </li>
-                <li id="mode-theme">
+
+                <li title="light mode" id="mode-theme" onclick="enableLightMode()">
                     <i class="ri-sun-line"></i>
                 </li>
-                <li id="user-logo">
-                    <img src="./images/removed_bg_icon.png" alt="not available !">
+
+                <li title="dark mode" id="dark-mode-theme" onclick="disableLightMode()">
+                    <i class="ri-sun-line"></i>
                 </li>
+
+                <li id="user-logo" onclick="openMenu()">
+                    <div id="user-logo-img">
+                        <img src="./images/removed_bg_icon.png" alt="not available !">
+                    </div>
+                    <i id="user-menu" class="ri-menu-fill"></i>
+                </li>
+                
             </ul>
         </div>
+        <!-- side menu bar-->
+        <div class="side-menu-wrapper" id="menu">
+            <i id="menu-hide" class="ri-close-line" onclick="closeMenu()"></i>
+            <div class="side-menu">
+                <section class="first-section">
+                    <div class="menu-image">
+                        <img src="./images/project_logo.jpg" alt="">
+                    </div>
+                    <h4>Rojip Chhantyal</h4>
+                    <p>Developer</p>
+                </section>
+                <ul class="second-section">
+                    <p>Explor</p>
+                    <li>
+                        <i class="ri-home-2-line"></i>
+                        <span>Welcome</span>
+                    </li>
+                    <li>
+                        <i class="ri-code-box-line"></i>
+                        <span>Portfolio</span>
+                    </li>
+                    <li>
+                        <i class="ri-message-2-line"></i>
+                        <span>Get in Touch</span>
+                    </li>
+                </ul>
+                <ul class="last-section">
+                    <p>Contact</p>
+                    <li>
+                        <i class="ri-map-pin-2-line"></i>
+                        <a target="_blank" href="#">Nepal</a>
+                    </li>
+                    <li>
+                        <i class="ri-mail-line"></i>
+                        <a target="_blank" href="#">rejanchhantyal10@gmail.com</a>
+                    </li>
+                    <li>
+                        <i class="ri-github-fill"></i>
+                        <a target="_blank" href="https://github.com/rojipchhantyal">rojipchhantyal</a>
+                    </li>
+                    <li>
+                        <i class="ri-linkedin-box-fill"></i>
+                        <a target="_blank" href="https://www.linkedin.com/in/rojip-chhantyal-aa3043304/">Rojip Chhantyal</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- search pop up -->
+        <div class="search-pop-up-wrapper" id="search-pop-up-wrapper-id">
+            <div class="search-pop-up">
+                <input id="searchbar-input" type="text">
+                <i onclick="searchClose()" class="ri-close-line"></i>
+            </div>
+            <h4>Result not found !</h4>
+        </div>
+
         <nav>
-            <div class="options" id="opt-welcome">
+            <div class="options" id="opt-welcome" onclick="showSection('welcome-content')">
                 <i class="ri-home-2-line"></i>
                 <span>Welcome</span>
             </div>
-            <div class="options" id="opt-portfolio">
+            <div class="options" id="opt-portfolio" onclick="showSection('portfolio-content')">
                 <i class="ri-code-box-line"></i>
                 <span>Portfolio</span>
             </div>
-            <div class="options" id="opt-portfolio">
+            <div class="options" id="opt-form" onclick="showSection('form-content')">
                 <i class="ri-message-2-line"></i>
                 <span>Get in Touch</span>
             </div>
@@ -90,48 +157,438 @@
             </div>
         </section>
         <div class="main-contents-wrapper">
-            <section class="main-contents">
-                <section class="title">
-                    <p>rojipchhantyal <span>/</span> README.<span>md</span></p>
-                    <h1>💫 Hi 👋, I'm Rojip Chhantyal</h1>
-                </section>
-                <section class="about-me">
-                    <p>I’m on a journey to becoming a backend developer, building my skills through computer science and hands-on web projects 💻. I enjoy working with APIs, databases, and server-side development while also having knowledge of frontend technologies. I love turning ideas into real applications and learning more about software engineering every day ⚙️. At the end of the day, I’m just someone passionate about coding, creativity, and growing step by step toward my goals. 🚀🚀🚀</p>
-                    <a href="#">
-                        Get in Touch
-                    </a>
-                    <h4>💻 Tech Stack:</h4>
-                </section>
-                <section class="technologies">
-                    <img src="https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white" alt="https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white">
-                    <img src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white" alt="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white">
-                    <img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white" alt="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white">
-                    <img src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white" alt="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white">
-                    <img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" alt="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E">
-                    <img src="https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white" alt="https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white">
-                    <img src="https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white" alt="https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white">
-                    <img src="https://img.shields.io/badge/Apache%20Maven-C71A36?style=for-the-badge&logo=Apache%20Maven&logoColor=white" alt="https://img.shields.io/badge/Apache%20Maven-C71A36?style=for-the-badge&logo=Apache%20Maven&logoColor=white">
-                    <img src="https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white" alt="https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white">
-                    <img src="https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=csharp&logoColor=white" alt="https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=csharp&logoColor=white">
-                    <img src="https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white" alt="https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white">
 
-                    <p>
-                        This website is inspired by <a target="_blank" href="https://www.emanuelesgroi.com/">Emanuele Sgroi</a> and GitHub’s design style. Feel free to explore my portfolio and check out my projects. 🌟🌐
-                    </p>
-                    
-                    <div class="profile-views">
-                        <span id="count-text">Profile views</span>
-                        <span id="counts">677</span>
+            <div class="main-contents-inner-wrapper" id="welcome-content">
+
+                <section class="main-contents">
+                    <section class="title">
+                        <p>rojipchhantyal <span>/</span> README.<span>md</span></p>
+                        <h1>💫 Hi 👋, I'm Rojip Chhantyal</h1>
+                    </section>
+                    <section class="about-me">
+                        <p>I’m on a journey to becoming a backend developer, building my skills through computer science and hands-on web projects 💻. I enjoy working with APIs, databases, and server-side development while also having knowledge of frontend technologies. I love turning ideas into real applications and learning more about software engineering every day ⚙️. At the end of the day, I’m just someone passionate about coding, creativity, and growing step by step toward my goals. 🚀🚀🚀</p>
+                        <a onclick="showSection('form-content')">
+                            Get in Touch
+                        </a>
+                        <h4>💻 Tech Stack:</h4>
+                    </section>
+                    <section class="technologies">
+                        <img src="https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white" alt="https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white">
+                        <img src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white" alt="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white">
+                        <img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white" alt="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white">
+                        <img src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white" alt="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white">
+                        <img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" alt="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E">
+                        <img src="https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white" alt="https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white">
+                        <img src="https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white" alt="https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white">
+                        <img src="https://img.shields.io/badge/Apache%20Maven-C71A36?style=for-the-badge&logo=Apache%20Maven&logoColor=white" alt="https://img.shields.io/badge/Apache%20Maven-C71A36?style=for-the-badge&logo=Apache%20Maven&logoColor=white">
+                        <img src="https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white" alt="https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white">
+                        <img src="https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=csharp&logoColor=white" alt="https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=csharp&logoColor=white">
+                        <img src="https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white" alt="https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white">
+    
+                        <p>
+                            This website is inspired by <a target="_blank" href="https://www.emanuelesgroi.com/">Emanuele Sgroi</a> and GitHub’s design style. Feel free to explore my portfolio and check out my projects. 🌟🌐
+                        </p>
+                        
+                        <div class="profile-views">
+                            <span id="count-text">Profile views</span>
+                            <span id="counts">677</span>
+                        </div>
+                    </section>
+                </section>
+                <section class="pinned-main-content">
+                    <p>Pinned</p>
+                    <div class="actual-pinned-projects">
+                        <div class="projects">
+                            <div class="projects-details">
+                                <section class="project-title">
+                                    <i class="ri-book-marked-line"></i>
+                                    <a href="#">SkillQuest</a>
+                                    <span>Public</span>
+                                </section>
+                                <p>SkillQuest – A student-focused freelancing platform that connects students with small tasks and opportunities. Built using HTML, CSS, JS, and Java Servlet backend. Includes essential features such as user registration/login, task posting, task browsing, task claiming, dashboard view, and submission management.</p>
+                            </div>
+                            <div class="projects-ref">
+                                <div class="circle"></div>
+                                <a href="#">/Portfolio</a>
+                            </div>
+                        </div>
+    
+                        <div class="projects">
+                            <div class="projects-details">
+                                <section class="project-title">
+                                    <i class="ri-book-marked-line"></i>
+                                    <a href="#">project on .net</a>
+                                    <span>Public</span>
+                                </section>
+                                <p>This is a simple C# .NET console app with login, registration, and a product dashboard. Users can add, update, delete, and view products after logging in, making it a straightforward menu-driven CRUD system.</p>
+                            </div>
+                            <div class="projects-ref">
+                                <div class="circle"></div>
+                                <a href="#">/Portfolio</a>
+                            </div>
+                        </div>
+    
+                       <div class="projects">
+                            <div class="projects-details">
+                                <section class="project-title">
+                                    <i class="ri-book-marked-line"></i>
+                                    <a href="#">2D game in java</a>
+                                    <span>Public</span>
+                                </section>
+                                <p>This is the simple open world game made using java swing awt. where user can control the character and move around with collision mechanism and fps and smart map generate etc.</p>
+                            </div>
+                            <div class="projects-ref">
+                                <div class="circle"></div>
+                                <a href="#">/Portfolio</a>
+                            </div>
+                        </div>
+    
+                        <div class="projects">
+                            <div class="projects-details">
+                                <section class="project-title">
+                                    <i class="ri-book-marked-line"></i>
+                                    <a href="#">Post posting</a>
+                                    <span>Public</span>
+                                </section>
+                                <p>SkillQuesh small tasks and opportunities. Built using HTML, CSS, JS, and Java Servlet backend.</p>
+                            </div>
+                            <div class="projects-ref">
+                                <div class="circle"></div>
+                                <a href="#">/Portfolio</a>
+                            </div>
+                        </div>
+    
+                        <div class="projects">
+                            <div class="projects-details">
+                                <section class="project-title">
+                                    <i class="ri-book-marked-line"></i>
+                                    <a href="#">Project</a>
+                                    <span>Public</span>
+                                </section>
+                                <p>This project focuses on achieving responsive design while learning modern web development techniques.</p>
+                            </div>
+                            <div class="projects-ref">
+                                <div class="circle"></div>
+                                <a href="#">/Portfolio</a>
+                            </div>
+                        </div>
+    
+                        <div class="projects">
+                            <div class="projects-details">
+                                <section class="project-title">
+                                    <i class="ri-book-marked-line"></i>
+                                    <a href="#">To do app</a>
+                                    <span>Public</span>
+                                </section>
+                                <p>A simple To‑Do application built with Spring Boot and Thymeleaf, created to practice backend development and learn Spring Boot fundamentals.</p>
+                            </div>
+                            <div class="projects-ref">
+                                <div class="circle"></div>
+                                <a href="#">/Portfolio</a>
+                            </div>
+                        </div>
                     </div>
                 </section>
-            </section>
-            <section class="pinned-main-content">
+                <div class="contribution-wrapper">
+                    <h2>150 contributions</h2>
+                    <section class="contribution">
+                        <div class="months">
+                            <span>Jan</span>
+                            <span>Feb</span>
+                            <span>Mar</span>
+                            <span>Apr</span>
+                            <span>May</span>
+                            <span>Jun</span>
+                            <span>Jul</span>
+                            <span>Aug</span>
+                            <span>Sep</span>
+                            <span>Oct</span>
+                            <span>Nov</span>
+                            <span>Dec</span>
+                        </div>
+                        <div class="table-wrapper">
+                            <div class="days">
+                                <span>Mon</span>
+                                <span>Wed</span>
+                                <span>Fri</span>
+                            </div>
+                            <table>
+                                <tr>
+                                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                                </tr>
+    
+                                <tr>
+                                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                                </tr>
+    
+                                <tr>
+                                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                                </tr>
+    
+                                <tr>
+                                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                                </tr>
+    
+                                <tr>
+                                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                                </tr>
+    
+                                <tr>
+                                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                                </tr>
+                                    
+                                <tr>
+                                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="table-right-side-hider"></div>
+                    </section>
+                    <ul class="dates">
+                        <li>
+                            <span>2026</span>
+                        </li>
+                        <li>
+                            <span>2025</span>
+                        </li>
+                        <li>
+                            <span>2024</span>
+                        </li>
+                    </ul>  
+                </div>
+            </div>
 
+            <div class="portfolio-section" id="portfolio-content" style="display: none;">
+                <ul>
+                    <div class="portfolio-layout">
+                        <input type="text">
+                        <div class="layout-wrapper">
+                            <p>Layout</p>
+                            <button>
+                                <i class="ri-menu-line"></i>
+                                list
+                            </button>
+                            <button id="sorted-portfolio">
+                                <i class="ri-sort-number-asc"></i>
+                                sorted
+                            </button>
+                        </div>
+                    </div>
+                    <li id="first-portfolio">
+                        <div class="portfolio-title">
+                            <a href="#">SkillQuest</a>
+                            <span>Public</span>
+                        </div>
+
+                        <p>SkillQuest – A student-focused freelancing platform that connects students with small tasks and opportunities. Built using HTML, CSS, JS, and Java Servlet backend. Includes essential features such as user registration/login, task posting, task browsing, task claiming, dashboard view, and submission management.</p>
+
+                        <div class="portfolio-info">
+                            <div class="language-used">
+                                <div class="circle"></div>
+                                <span>Java</span>
+                            </div>
+
+                            <a target="_blank" href="https://github.com/rojipchhantyal/SkillQuest"><i class="ri-eye-fill"></i>Demo</a>
+                            <a target="_blank" href="https://github.com/rojipchhantyal/SkillQuest"><i class="ri-github-fill"></i>Code</a>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="portfolio-title">
+                            <a href="#">Project on .net</a>
+                            <span>Public</span>
+                        </div>
+
+                        <p>This is a simple C# .NET console app with login, registration, and a product dashboard. Users can add, update, delete, and view products after logging in, making it a straightforward menu-driven CRUD system.</p>
+
+                        <div class="portfolio-info">
+                            <div class="language-used">
+                                <div class="circle"></div>
+                                <span>.NET</span>
+                            </div>
+
+                            <a target="_blank" href="https://github.com/rojipchhantyal/Mini-project-on-.net"><i class="ri-eye-fill"></i>Demo</a>
+                            <a target="_blank" href="https://github.com/rojipchhantyal/Mini-project-on-.net"><i class="ri-github-fill"></i>Code</a>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="portfolio-title">
+                            <a href="#">2D game in java</a>
+                            <span>Public</span>
+                        </div>
+
+                        <p>This is the simple open world game made using java swing awt. where user can control the character and move around with collision mechanism and fps and smart map generate etc.</p>
+
+                        <div class="portfolio-info">
+                            <div class="language-used">
+                                <div class="circle"></div>
+                                <span>Java</span>
+                            </div>
+
+                            <a target="_blank" href="https://github.com/rojipchhantyal/2D-game-in-java"><i class="ri-eye-fill"></i>Demo</a>
+                            <a target="_blank" href="https://github.com/rojipchhantyal/2D-game-in-java"><i class="ri-github-fill"></i>Code</a>
+                        </div>
+                    </li>
+
+
+                    <li>
+                        <div class="portfolio-title">
+                            <a href="#">Post posting</a>
+                            <span>Public</span>
+                        </div>
+
+                        <p>This is the project where user can login register and post task using html css and php.</p>
+
+                        <div class="portfolio-info">
+                            <div class="language-used">
+                                <div class="circle"></div>
+                                <span>php</span>
+                            </div>
+
+                            <a target="_blank" href="https://github.com/rojipchhantyal/PostPosting"><i class="ri-eye-fill"></i>Demo</a>
+                            <a target="_blank" href="https://github.com/rojipchhantyal/PostPosting"><i class="ri-github-fill"></i>Code</a>
+                        </div>
+                    </li>
+
+
+                    <li>
+                        <div class="portfolio-title">
+                            <a href="#">Project</a>
+                            <span>Public</span>
+                        </div>
+
+                        <p>This project focuses on achieving responsive design while learning modern web development techniques.</p>
+
+                        <div class="portfolio-info">
+                            <div class="language-used">
+                                <div class="circle"></div>
+                                <span>htm/css</span>
+                            </div>
+
+                            <a target="_blank" href="https://github.com/rojipchhantyal/HTMLandCSS/tree/master/WithCollege/Project"><i class="ri-eye-fill"></i>Demo</a>
+                            <a target="_blank" href="https://github.com/rojipchhantyal/HTMLandCSS/tree/master/WithCollege/Project"><i class="ri-github-fill"></i>Code</a>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="portfolio-title">
+                            <a href="#">To do app</a>
+                            <span>Public</span>
+                        </div>
+
+                        <p>A simple To‑Do application built with Spring Boot and Thymeleaf, created to practice backend development and learn Spring Boot fundamentals.</p>
+
+                        <div class="portfolio-info">
+                            <div class="language-used">
+                                <div class="circle"></div>
+                                <span>Java</span>
+                            </div>
+
+                            <a target="_blank" href="https://github.com/rojipchhantyal/To-do-app"><i class="ri-eye-fill"></i>Demo</a>
+                            <a target="_blank" href="https://github.com/rojipchhantyal/To-do-app"><i class="ri-github-fill"></i>Code</a>
+                        </div>
+                    </li>
+
+
+                    <li>
+                        <div class="portfolio-title">
+                            <a href="#">Cloth track</a>
+                            <span>Private</span>
+                        </div>
+
+                        <p>An inventory management system for clothing built with Spring Boot and Thymeleaf. It manages stock, product details, and CRUD operations while helping me learn Spring Boot concepts.</p>
+
+                        <div class="portfolio-info">
+                            <div class="language-used">
+                                <div class="circle"></div>
+                                <span>php</span>
+                            </div>
+
+                            <a target="_blank" href="https://github.com/rojipchhantyal/cloth-track"><i class="ri-eye-fill"></i>Demo</a>
+                            <a target="_blank" href="https://github.com/rojipchhantyal/cloth-track"><i class="ri-github-fill"></i>Code</a>
+                        </div>
+                    </li>
+
+                    <li id="last-portfolio">
+                        <div class="portfolio-title">
+                            <a href="#">Thakur game</a>
+                            <span>Public</span>
+                        </div>
+
+                        <p>“This is the repo where the game built for Thakur is stored. It’s a Flappy Bird‑style game created just for fun and to tease my friend.</p>
+
+                        <div class="portfolio-info">
+                            <div class="language-used">
+                                <div class="circle"></div>
+                                <span>javascript</span>
+                            </div>
+
+                            <a target="_blank" href="https://github.com/rojipchhantyal/Thakur.-the-game"><i class="ri-eye-fill"></i>Demo</a>
+                            <a target="_blank" href="https://github.com/rojipchhantyal/Thakur.-the-game"><i class="ri-github-fill"></i>Code</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <section class="get-in-touch" id="form-content" style="display: none;">
+                <ul>
+                    <h4>Connect With Me:</h4>
+                    <li id="first-contact-list">
+                        <i class="ri-map-pin-2-line"></i>
+                        <a href="#">Nepal</a>
+                    </li>
+                    <li>
+                        <i class="ri-mail-line"></i>
+                        <a href="#">rejanchhantyal10@gmail.com</a>
+                    </li>
+                    <li>
+                        <i class="ri-github-fill"></i>
+                        <a href="https://github.com/rojipchhantyal">rojipchhantyal</a>
+                    </li>
+                    <li>
+                        <i class="ri-linkedin-box-fill"></i>
+                        <a href="https://www.linkedin.com/in/rojip-chhantyal-aa3043304/">Rojip Chhantyal</a>
+                    </li>
+                </ul>
+
+                <div class="get-in-touch-title">
+                    <p id="contact.js">rojipchhantyal
+                        <span>/</span>
+                        Contact
+                        <span>.js</span>
+                    </p>
+                </div>
+                <form>
+                    <section class="field-wrapper">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name" placeholder="your name">
+                    </section>
+                    <section class="field-wrapper">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" placeholder="your email">
+                    </section>
+                    <section class="field-wrapper">
+                        <label for="message">Message</label>
+                        <textarea name="message" id="message" placeholder="message"></textarea>
+                    </section>
+                    
+                    <button>Send Message</button>
+                </form>
+                <p id="or-connect">or, connect me in Linkdin, <a href="#">rojipchhantyal</a></p>
+                <p id="main-connect"><i class="ri-arrow-left-long-line"></i> Also, you can contact me on my socials</p>
             </section>
         </div>
     </main>
     <footer>
-
+        <div class="footer-logo">
+            <span>R</span>
+            <p>© 2026 Rojip Chhantyal</p>
+        </div>
+        <div class="footer-link">
+            <a href="#">Contact</a>
+            <a href="#">Linkdin</a>
+        </div>
     </footer>
 </body>
 <script src="./js/script.js"></script>

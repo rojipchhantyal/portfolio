@@ -1,0 +1,405 @@
+:root{
+    --primary-color: #010409;
+    --secondary-color: #0d1117;
+    --button-color: #212830;
+    --hover-color: #262c36;
+    --primary-text-color: #f0f6fc;
+    --secondary-text-color: #858c95;
+    --extra-text-color: #9198a1;
+    --orangey-color: #f78166;
+    --hover-effect: #262c36;
+    --hover-effect-on-menus: #1f232c;
+    --light-blue: #4493F8;
+    --button-text-color: #ffff;
+    --media-dark-bgc: #16191C;
+}
+/* color for light mode */
+body.lightmode{
+    --primary-color: #ffffff;
+    --secondary-color: #ffffff;
+    --button-color: #a9bcd1;
+    --hover-color: #cccccc;
+    --primary-text-color: #000000;
+    --secondary-text-color: #585858;
+    --extra-text-color: #aaaaaa;
+    --orangey-color: #f78166;
+    --hover-effect: #d8d8d8;
+    --hover-effect-on-menus: #e8e8e8;
+    --light-blue: #4493F8;
+    --media-dark-bgc: #ffffff;
+}
+/* media query for contribution table */
+@media(max-width: 1243px){
+    .dates{
+        display: none;
+    }
+    .contribution{
+        width: 100%;
+    }
+    .days{
+        padding-right: 4px;
+    }
+}
+@media(max-width: 1081px){
+    .contribution{
+        overflow: scroll;
+        -webkit-overflow-scrolling: touch;
+        overflow-x: auto;
+        padding-right: 12px;
+        position: relative;
+    }
+    .contribution table{
+        box-sizing: border-box;
+        min-width: 692px;
+        margin-right: 12px;
+    }
+    .table-right-side-hider{
+        display: block;
+        position: absolute;
+        height: 100%;
+        width: 12px;
+        z-index: 999;
+        top: 0;
+        right: 0;
+        background-color: var(--secondary-color);
+    }
+}
+/* for search at header */
+@media(max-width: 490px){
+    #search-bar{
+        width: auto;
+        padding: 0 9px 0 0;
+    }
+    #search-bar span{
+        display: none;
+    }
+}
+/* for nav bar */
+@media(max-width: 470px){
+    .options{
+        padding: 1px 4px 4px 4px;
+
+    }
+    .options i{
+        font-size: 14px;
+    }
+    .options span{
+        font-size: 12px;
+    }
+    .options::after{
+        bottom: -10.5px;
+    }
+}
+@media(max-width: 375px){
+    .options span{
+        display: none;
+    }
+    .options i{
+        font-size: 16px;
+        font-weight: 500;
+    }
+}
+/* responsive for side menu bar */
+@media(max-width: 450px){
+    .side-menu{
+        width: 100%;
+    }
+}
+@media(max-width: 275px){
+    .menu-image{
+        height: 95px;
+        width: 95px;
+    }
+    .first-section h4{
+        font-style: 20px;
+    }
+    .second-section li span,
+    .last-section li a{
+        font-size: 12px;
+    }
+}
+
+/* for aside profile */
+@media(max-width: 10px){
+    
+}
+@media(max-width: 1010px){
+    .profile-infos{
+        flex: 0 0 256px;
+    }
+    .infos section{
+        gap: 12px;
+    }
+    .profile-image{
+        height: 252px;
+        width: 252px;
+    }
+}
+@media(max-width: 768px){
+    /* side profile bar style */
+    .profile-infos{
+        height: 100px;
+        flex-direction: row;
+        align-items: center;
+        padding: 24px;
+        gap: 24px;
+        flex: 0;
+    }
+    .infos p{
+        display: none;
+    }
+    .infos ul{
+        display: none;
+    }
+    .profile-image{
+        height: 118px;
+        width: 118px;
+    }
+    .infos section{
+        border-bottom: none;
+    }
+
+    /* change the bgc and border */
+    main{
+        background-color: var(--primary-color);
+    }
+    .profile-infos{
+        background-color: var(--media-dark-bgc);
+        border-bottom: 1px solid var(--extra-text-color);
+        margin-bottom: 18px;
+    }
+    .main-contents-wrapper{
+        background-color: var(--media-dark-bgc);
+    }
+    .main-contents{
+        padding: 24px 0;
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
+    }
+    .main-contents > *{
+        padding: 0 16px;
+        background-color: var(--media-dark-bgc);
+    }
+    .technologies{
+        padding-top: 16px;
+        background-color: var(--media-dark-bgc);
+    }
+
+    /* change in pinned section */
+    .pinned-main-content{
+        padding-left: 16px;
+        padding-right: 16px;
+        box-sizing: border-box;
+    }
+    .actual-pinned-projects{
+        display: flex;
+        flex-direction: column;
+    }
+    /* changes for contributions sections */
+    .contribution-wrapper{
+        padding-left: 16px;
+        padding-right: 16px;
+        box-sizing: border-box;
+    }
+    .table-right-side-hider{
+        background-color: var(--media-dark-bgc);
+    }
+}
+
+@media(max-width: 740px){
+    .infos{
+    }
+    .profile-image{
+        height: 95px;
+        width: 95px;
+    }
+    .profile-name h3{
+        font-weight: 600;
+    }
+    .profile-name span{
+        font-weight: 400;
+    }
+}
+@media(max-width: 375px){
+    .profile-image{
+        height: 75px;
+        width: 75px;
+    }
+    .profile-name h3{
+        font-size: 22px;
+    }
+}
+@media(max-width: 318px){
+    .profile-image{
+        height: 65px;
+        width: 65px;
+    }
+}
+@media(max-width: 308px){
+    .profile-name h3{
+        font-style: 20px;
+    }
+    .profile-name span{
+        font-style: 18px;
+    }
+}
+@media(max-width: 306px){
+    .profile-image{
+        width: 75px;
+        background-color: #fff;
+        object-fit: contain;
+    }
+}
+
+/* for main section */
+@media(max-width: 1122px){
+    .main-contents-wrapper{
+        width: 66%;
+    }
+}
+@media(max-width: 895px){
+    .main-contents-wrapper{
+        width: 62%;
+    }
+}
+/* responsiveness for font size */
+@media(max-width: 375px){
+    .title h1{
+        font-size: 24px;
+    }
+}
+
+@media(max-width: 768px){
+    /* style to header */
+    header{
+        background-color: var(--media-dark-bgc);
+    }
+
+    /* for main content */
+    main{
+        flex-direction: column;
+        padding: 0;
+        gap: 0;
+    }
+    .main-contents-wrapper{
+        width: 100%;
+    }
+
+
+    /* for portfolio */
+    .portfolio-layout{
+        padding: 24px;
+        margin-bottom: 12px;
+        background-color: var(--media-dark-bgc);
+        border-left: none;
+        border-right: none;
+    }
+    .portfolio-section ul li{
+        padding: 16px 24px;
+        background-color: var(--media-dark-bgc);
+    }
+    #first-portfolio{
+        border-top: 1px solid var(--extra-text-color);
+    }
+    #last-portfolio{
+        border-bottom: 1px solid var(--extra-text-color);
+    }
+
+    /* for get in touch section */
+    .get-in-touch{
+        padding-top: 0;
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 0;
+        background-color: var(--primary-color);
+    }
+    #contact.js{
+        display: none;
+    }
+    #or-connect{
+        display: block;
+        background-color: var(--media-dark-bgc);
+        padding-bottom: 24px;
+    }
+    #main-connect{
+        display: none;
+    }
+    .get-in-touch{
+        border-left: none;
+        border-right: none;
+        border-radius: 0;
+    }
+    .get-in-touch ul{
+        display: flex;
+        background-color: var(--media-dark-bgc);
+        padding-top: 24px;
+    }
+    #first-contact-list{
+        margin-top: 12px;
+    }
+    .get-in-touch-title{
+        background-color: var(--media-dark-bgc);
+        padding: 24px 16px 0 16px;
+        border-top: 1px solid var(--extra-text-color);
+    }
+    form{
+        background-color: var(--media-dark-bgc);
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
+@media(max-width: 518px){
+    .logo p{
+        display: none;
+    }
+}
+
+
+/* responsive for the portfolio section */
+@media(max-width: 468px){
+    .portfolio-layout{
+        flex-direction: column-reverse;
+        box-sizing: border-box;
+    }
+    .portfolio-layout input{
+        width: 97%;
+        padding: 6px;
+    }
+    .layout-wrapper p{
+        font-size: 14px;
+    }
+    .layout-wrapper button{
+        font-size: 14px;
+        font-weight: 400;
+    }
+}
+@media(max-width: 270px){
+    .layout-wrapper button{
+        padding: 2px 6px;
+    }
+}
+
+/* responsive for footer */
+@media(max-width: 450px){
+    footer{
+        flex-direction: column-reverse;
+    }
+    .footer-link{
+        display: flex;
+        gap: 12px;
+    }
+}
+/* responsive for search pop up */
+@media(max-width: 230px){
+    .search-pop-up i{
+        font-size: 14px;
+    }
+    .search-pop-up input{
+        width: 50vw;
+    }
+    .search-pop-up-wrapper h4{
+        font-size: 12px;
+    }
+}
