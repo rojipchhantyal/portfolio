@@ -40,7 +40,7 @@ body.lightmode{
         padding-right: 4px;
     }
 }
-@media(max-width: 1081px){
+@media(max-width: 1127px){
     .contribution{
         overflow: scroll;
         -webkit-overflow-scrolling: touch;
@@ -48,12 +48,14 @@ body.lightmode{
         padding-right: 12px;
         position: relative;
     }
+}
+@media(max-width: 1081px){
     .contribution table{
         box-sizing: border-box;
         min-width: 692px;
         margin-right: 12px;
     }
-    .table-right-side-hider{
+    /* .table-right-side-hider{
         display: block;
         position: absolute;
         height: 100%;
@@ -62,7 +64,7 @@ body.lightmode{
         top: 0;
         right: 0;
         background-color: var(--secondary-color);
-    }
+    } */
 }
 /* for search at header */
 @media(max-width: 490px){
@@ -353,6 +355,20 @@ body.lightmode{
 @media(max-width: 518px){
     .logo p{
         display: none;
+    }
+}
+@media(max-width: 385px){
+    .get-in-touch > p,
+    .get-in-touch > p a{
+        font-size: 14px;
+        font-weight: 500;
+    }
+}
+@media(max-width: 300px){
+    .get-in-touch > p,
+    .get-in-touch > p a{
+        font-size: 12px;
+        font-weight: 500;
     }
 }
 

@@ -727,9 +727,9 @@ main{
     background-color: var(--light-blue);
     color: var(--primary-text-color);
 }
-.table-right-side-hider{
+/* .table-right-side-hider{
 
-}
+} */
 
 /* footer style */
 footer{
@@ -744,6 +744,7 @@ footer{
     display: flex;
     align-items: center;
     gap: 4px;
+    cursor: pointer;
 }
 .footer-logo span{
     background-color: var(--primary-text-color);
